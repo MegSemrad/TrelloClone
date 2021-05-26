@@ -24,7 +24,7 @@ VALUES
   (7, 'Honey Dew', '#F0FFF0'),
   (8, 'LightBlue', '#ADD8E6'),
   (9, 'Thistle', '#D8BFD8'),
-  (10, 'Wheat', '#F5DEB3'),;
+  (10, 'Wheat', '#F5DEB3');
 SET IDENTITY_INSERT [Color] OFF
 
 
@@ -44,7 +44,7 @@ SET IDENTITY_INSERT [Board] ON
 INSERT INTO [Board]
   ([Id], [UserId], [ColorId], [Name])
 VALUES 
-  (1, 1, 9, 'Weekly To Do's');
+  (1, 1, 9, 'Weekly To Do''s');
 SET IDENTITY_INSERT [Board] OFF
 
 
@@ -61,8 +61,8 @@ SET IDENTITY_INSERT [Card] ON
 INSERT INTO [Card]
   ([Id], [ListId], [Name], [Description])
 VALUES 
-  (1, 2, 'History', 'Work to complete before history class on Friday'),  
-  (2, 1, 'Groceries', 'Grocery items to pick up'); 
+  (1, 1, 'History', 'Work to complete before history class on Friday'),  
+  (2, 2, 'Groceries', 'Grocery items to pick up'); 
 SET IDENTITY_INSERT [Card] OFF
 
 
@@ -90,3 +90,13 @@ VALUES
   (7, 4, 'Worksheet', 0),
   (8, 4, 'Read chapter 9', 1); 
 SET IDENTITY_INSERT [ChecklistItem] OFF
+
+
+SET IDENTITY_INSERT [CardLabel] ON
+INSERT INTO [CardLabel]
+  ([Id], [LabelId], [CardId])
+VALUES 
+  (1, 4, 1),  
+  (2, 3, 2),
+  (3, 5, 2); 
+SET IDENTITY_INSERT [CardLabel] OFF
