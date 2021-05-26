@@ -62,13 +62,31 @@ INSERT INTO [Card]
   ([Id], [ListId], [Name], [Description])
 VALUES 
   (1, 2, 'History', 'Work to complete before history class on Friday'),  
-  (2, 2, 'Welsh', 'Study items and project to complete before Welsh class on Thursday'),
-  (4, 1, 'Groceries', 'Grocery items to pick up'); 
+  (2, 1, 'Groceries', 'Grocery items to pick up'); 
 SET IDENTITY_INSERT [Card] OFF
 
 
+SET IDENTITY_INSERT [CardChecklist] ON
+INSERT INTO [CardChecklist]
+  ([Id], [CardId], [Name])
+VALUES 
+  (1, 2, 'Kroger'),  
+  (2, 2, 'Costco'),
+  (3, 1, 'Research Project'),
+  (4, 1, 'Homework'); 
+SET IDENTITY_INSERT [CardChecklist] OFF
 
 
-
-
-
+SET IDENTITY_INSERT [ChecklistItem] ON
+INSERT INTO [ChecklistItem]
+  ([Id], [CardChecklistId], [Name], [IsChecked])
+VALUES 
+  (1, 2, 'Paper towels', 0),  
+  (2, 2, 'Eggs', 1),
+  (3, 3, 'Research for research project', 1),
+  (4, 3, 'Write research project paper', 0),
+  (5, 1, 'Bread', 1),
+  (6, 1, 'Avocados', 0),
+  (7, 4, 'Worksheet', 0),
+  (8, 4, 'Read chapter 9', 1); 
+SET IDENTITY_INSERT [ChecklistItem] OFF
