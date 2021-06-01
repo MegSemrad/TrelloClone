@@ -3,13 +3,15 @@
 
 namespace TrelloClone.Models
 {
-    public class Label
+    public class Board
     {
         public int Id { get; set; }
 
         public int UserId { get; set; }
 
-        [Required]  
+        public int ColorId { get; set; }
+
+        [Required]
         public string Name { get; set; }
     }
 }

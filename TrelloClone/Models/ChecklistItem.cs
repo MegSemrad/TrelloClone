@@ -3,13 +3,15 @@
 
 namespace TrelloClone.Models
 {
-    public class Label
+    public class ChecklistItem
     {
         public int Id { get; set; }
 
-        public int UserId { get; set; }
+        public int CardChecklistId { get; set; }
 
-        [Required]  
+        [Required]
         public string Name { get; set; }
+
+        public bool IsChecked { get; set; }
     }
 }
