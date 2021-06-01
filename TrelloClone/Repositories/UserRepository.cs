@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using TrelloClone.Models;
-using TrelloClone.Utils.cs;
+using TrelloClone.Utils;
 
 
 namespace TrelloClone.Repositories
