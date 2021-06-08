@@ -9,6 +9,8 @@ namespace TrelloClone.Models
 
         public int ListId { get; set; }
 
+        public List List { get; set; }
+
         [Required]
         public string Name { get; set; }
 
