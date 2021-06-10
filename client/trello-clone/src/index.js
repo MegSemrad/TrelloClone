@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import firebase from "firebase";
 import { BrowserRouter as Router } from "react-router-dom";
-import TrelloClone from './components/TrelloClone';
-import { UserProvider } from "./providers/UserProvider";
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import TrelloClone from "./components/TrelloClone.js";
+import { UserProvider } from "./components/providers/UserProvider.js";
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const firebaseConfig = {
