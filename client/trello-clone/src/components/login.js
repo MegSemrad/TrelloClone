@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { Button, Card, Container, Form, FormGroup, Input, Label } from 'reactstrap';
-import { UserContext } from "../providers/UserProvider";
+import { UserContext } from "./providers/UserProvider.js";
 
 export default function Login() {
     const history = useHistory();

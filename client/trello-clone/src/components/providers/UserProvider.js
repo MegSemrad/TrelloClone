@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import { Spinner } from "reactstrap";
 import firebase from "firebase";
 import "firebase/auth";
