@@ -6,8 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.IdentityModel.Tokens;
-
-
+using TrelloClone.Repositories;
 
 namespace TrelloClone
 {
@@ -25,7 +24,7 @@ namespace TrelloClone
         {
 
 
-
+            services.AddTransient<IUserRepository, UserRepository>();
 
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
