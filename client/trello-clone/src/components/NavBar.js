@@ -2,12 +2,16 @@ import React, { useState, useContext } from 'react';
 import { NavLink as RRNavLink, Redirect } from "react-router-dom";
 import {
     Collapse,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
     Navbar,
     NavbarToggler,
     Nav,
     NavItem,
     NavLink,
-    NavbarText
+    NavbarText,
+    UncontrolledDropdown
 } from 'reactstrap';
 import { UserContext } from "./providers/UserProvider.js"
 
@@ -34,19 +38,30 @@ export default function NavBar() {
                     </Nav>
                     <NavbarText className="navbarTitle">Trello Clone</NavbarText>
 
-                    <Nav navbar>
-                        {isLoggedIn &&
-                            <>
-                                <NavItem>
-                                    <a aria-current="page" className="nav-link"
-                                        style={{ cursor: "pointer" }} onClick={logout}>Logout</a>
-                                </NavItem>
-                            </>
-                        }
-                        {!isLoggedIn &&
-                            <Redirect to="/login" />
-                        }
-                    </Nav>
+                    <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav>
+                            User Initial
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <DropdownItem>
+                                Account
+                            </DropdownItem>
+                            <DropdownItem>
+                                {isLoggedIn &&
+                                    <>
+                                        <NavItem>
+                                            <a aria-current="page" className="nav-link"
+                                                style={{ cursor: "pointer" }} onClick={logout}>Logout</a>
+                                        </NavItem>
+                                    </>
+                                }
+                                {!isLoggedIn &&
+                                    <Redirect to="/login" />
+                                }
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
+
                 </Collapse>
             </Navbar>
         </div>
