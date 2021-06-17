@@ -4,7 +4,6 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -23,18 +22,17 @@ export default function NavBar() {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <NavLink href="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="">+</NavLink>
                         </NavItem>
                     </Nav>
-                    <NavbarText>Trello Clone</NavbarText>
+                    <NavbarText className="navbarTitle">Trello Clone</NavbarText>
 
                     <Nav navbar>
                         {isLoggedIn &&
