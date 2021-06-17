@@ -14,17 +14,25 @@ code {
 
 
 
-/* --------------------------- Login --------------------------- */
+/* --------------------------- Login Page --------------------------- */
 .loginCard {
   margin-top: 110px;
   padding: 35px;
 }
 
+.loginCard__formGroup {
+  margin: 20px 0px;
+}
 
-/* ---------------------------Register --------------------------- */
+
+/* ---------------------------Register Page --------------------------- */
 .registerCard {
   margin-top: 110px;
   padding: 35px;
+}
+
+.registerCard__formGroup {
+  margin: 20px 0px;
 }
 
 

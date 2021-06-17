@@ -22,15 +22,15 @@ export default function Login() {
             <Card className="loginCard">
                 <Form onSubmit={loginSubmit}>
                     <fieldset>
-                        <FormGroup>
+                        <FormGroup className="loginCard__formGroup">
                             <Label for="email">Email</Label>
                             <Input id="email" type="text" onChange={e => setEmail(e.target.value)} />
                         </FormGroup>
-                        <FormGroup>
+                        <FormGroup className="loginCard__formGroup">
                             <Label for="password">Password</Label>
                             <Input id="password" type="password" onChange={e => setPassword(e.target.value)} />
                         </FormGroup>
-                        <FormGroup>
+                        <FormGroup className="loginCard__formGroup">
                             <Button>Login</Button>
                         </FormGroup>
                         <em>
