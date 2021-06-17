@@ -14,8 +14,24 @@ code {
 
 
 
+/* --------------------------- Login --------------------------- */
+.loginCard {
+  margin-top: 110px;
+  padding: 35px;
+}
+
+
+/* ---------------------------Register --------------------------- */
+.registerCard {
+  margin-top: 110px;
+  padding: 35px;
+}
+
+
 /* --------------------------- NavBar --------------------------- */
 
 .navbarTitle {
   margin: auto;
 }
+
+
