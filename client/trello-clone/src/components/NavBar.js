@@ -29,7 +29,7 @@ export default function NavBar() {
                             <NavLink href="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="">+</NavLink>
+                            <NavLink href="">➕</NavLink>
                         </NavItem>
                     </Nav>
                     <NavbarText className="navbarTitle">Trello Clone</NavbarText>
