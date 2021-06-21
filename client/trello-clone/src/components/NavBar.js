@@ -32,9 +32,6 @@ export default function NavBar() {
                         <NavItem>
                             <NavLink href="/">Home</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink href="">➕</NavLink>
-                        </NavItem>
                     </Nav>
                     <NavbarText className="navbarTitle">Trello Clone</NavbarText>
 

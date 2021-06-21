@@ -21,5 +21,12 @@ export const BoardProvider = (props) => {
         )
     };
 
+    return (
+        <BoardContext.Provider value={{
+            getUserBoards
+        }}>
+            {props.children}
+        </BoardContext.Provider>
+    );
 
-}
+};
