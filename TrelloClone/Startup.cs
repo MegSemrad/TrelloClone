@@ -25,6 +25,7 @@ namespace TrelloClone
 
 
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IBoardRepository, BoardRepository>();
 
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
